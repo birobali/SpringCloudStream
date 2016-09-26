@@ -1,0 +1,13 @@
+server:
+  port: 8080
+spring:
+  integration:
+    poller:
+      fixed-delay: 4000
+  cloud:
+    stream:
+      bindings:
+        output:
+          destination: topic.source 
+twitter:
+  keyword: election
