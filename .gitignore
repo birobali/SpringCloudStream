@@ -22,3 +22,6 @@ processor/.gradle/
 *.project
 processor/target/
 *.springBeans
+sink/.gradle/
+sink/.settings/
+sink/bin/
