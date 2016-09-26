@@ -1,0 +1,20 @@
+server:
+  port: 0
+spring:
+  cloud:
+    stream:
+      bindings:
+        input:
+          group: processor
+          destination: topic.source 
+        output:
+          destination: topic.processor
+          producer:
+            partitionKeyExtractorClass: com.springclouddemo.processor.service.EventPartitionExtractor
+            partitionSelectorClass: com.springclouddemo.processor.service.EventPartitionExtractor
+            partitionCount: 2
+partition:
+  candidates:
+    - clinton
+    - trump            
+          

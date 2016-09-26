@@ -14,3 +14,11 @@ source/.project
 *.classpath
 source/.settings/
 source/.gradle/2.13/
+processor/bin/
+processor/.settings/
+processor/.gradle/2.3/taskArtifacts/taskArtifacts.bin
+processor/.gradle/
+*.factorypath
+*.project
+processor/target/
+*.springBeans
