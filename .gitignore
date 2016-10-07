@@ -25,3 +25,4 @@ processor/target/
 sink/.gradle/
 sink/.settings/
 sink/bin/
+hashtagprocessor/bin/

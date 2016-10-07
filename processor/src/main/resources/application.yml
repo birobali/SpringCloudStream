@@ -1,12 +1,16 @@
 server:
   port: 0
+management:
+  health:
+    binders:
+      enabled: true 
 spring:
   cloud:
     stream:
       bindings:
         input:
           group: processor
-          destination: topic.source 
+          destination: topic.hashtagprocessor 
         output:
           destination: topic.processor
           producer:

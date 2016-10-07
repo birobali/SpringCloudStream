@@ -49,14 +49,6 @@ public class TweetCollectorService {
 		return tweetToSend;
 	}
 
-	public void setKeyword(String keyword) {
-		this.keyword = keyword;
-	}
-	
-	public String getKeyword() {
-		return keyword;
-	}
-
 	private StreamListener getStreamListener(){
 		return new StreamListener() {
 	        @Override

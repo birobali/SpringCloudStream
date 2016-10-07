@@ -1,5 +1,7 @@
 package com.springclouddemo.sink.handler.service;
 
+import java.util.AbstractMap;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.stream.annotation.EnableBinding;
 import org.springframework.cloud.stream.annotation.StreamListener;
@@ -15,7 +17,7 @@ public class StreamHandler {
 	  
 	  @StreamListener(Sink.INPUT)
 //	  @ServiceActivator(inputChannel=Sink.INPUT)
-	  public void handle(String message) {
-		  tweetAnalizerService.analize(message);
+	  public void handle(AbstractMap.SimpleImmutableEntry<String, Integer> hashTagCount) {
+		  tweetAnalizerService.analize(hashTagCount.getKey(), hashTagCount.getValue());
 	  }
 }

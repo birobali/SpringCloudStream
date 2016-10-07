@@ -1,6 +1,6 @@
 buildscript {
 	ext {
-		springBootVersion = '1.4.0.RELEASE'
+		springBootVersion = '1.4.1.RELEASE'
 	}
 	repositories {
 		mavenCentral()
@@ -15,7 +15,7 @@ apply plugin: 'eclipse'
 apply plugin: 'spring-boot'
 
 jar {
-	baseName = 'processor'
+	baseName = 'hashtagprocessor'
 	version = '0.0.1-SNAPSHOT'
 }
 sourceCompatibility = 1.8
@@ -31,8 +31,8 @@ dependencies {
     compile('org.springframework.boot:spring-boot-starter-actuator')
     compile("org.springframework.cloud:spring-cloud-stream:1.1.0.RELEASE")
     compile("org.springframework.cloud:spring-cloud-starter-stream-rabbit:1.1.0.RELEASE")
-	compile("org.springframework.social:spring-social-twitter")
-    compile("org.springframework.boot:spring-boot-configuration-processor")
+    compile("org.springframework.social:spring-social-twitter")
+    
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 }
 

@@ -1,5 +1,9 @@
 server:
   port: 0
+management:
+  health:
+    binders:
+      enabled: true   
 spring:
   cloud:
     stream:
@@ -8,7 +12,6 @@ spring:
       bindings:
         input:          
           destination: topic.processor 
-          content-type: application/json
           group: sink
           consumer:
-            partitioned: true    
+            partitioned: true

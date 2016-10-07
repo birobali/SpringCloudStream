@@ -5,13 +5,11 @@ management:
     binders:
       enabled: true 
 spring:
-  integration:
-    poller:
-      fixed-delay: 5000
   cloud:
     stream:
       bindings:
-        output:
+        input:
+          group: hashtagprocessor
           destination: topic.source 
-twitter:
-  keyword: election
+        output:
+          destination: topic.hashtagprocessor
