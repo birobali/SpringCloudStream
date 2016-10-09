@@ -26,3 +26,4 @@ sink/.gradle/
 sink/.settings/
 sink/bin/
 hashtagprocessor/bin/
+sinkfile/bin/

@@ -1,0 +1,19 @@
+server:
+  port: 0
+management:
+  health:
+    binders:
+      enabled: true   
+file:
+  directory: d:\  
+  binary: true
+  name: demo
+  suffix: sinkfile 
+  mode: APPEND   
+spring:
+  cloud:
+    stream:
+      bindings:
+        input:          
+          destination: topic.hashtagprocessor 
+          group: sinkfile
